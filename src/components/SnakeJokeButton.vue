@@ -1,9 +1,9 @@
 <template>
-    <div v-if="jokes.length > 0">
-      <div v-for="(joke, index) in jokes" :key="index">
-        <h4>{{ joke }}</h4>
-      </div>
+  <div v-if="jokes.length > 0">
+    <div v-for="(joke, index) in jokes" :key="index">
+      <h4>{{ joke }}</h4>
     </div>
+  </div>
 </template>
 
 <script>
@@ -16,7 +16,8 @@ export default {
 
   methods: {
     display_joke(snake_joke) {
-      this.jokes.push(snake_joke);
+      let string_snake = snake_joke.replace(/ /g, `_`);
+      this.jokes.push(string_snake);
     },
   },
 

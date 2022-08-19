@@ -1,9 +1,9 @@
 <template>
-    <div v-if="jokes.length > 0">
-      <div v-for="(joke, index) in jokes" :key="index">
-        <h4>{{ joke }}</h4>
-      </div>
+  <div v-if="jokes.length > 0">
+    <div v-for="(joke, index) in jokes" :key="index">
+      <h4>{{ joke }}</h4>
     </div>
+  </div>
 </template>
 
 <script>
@@ -15,8 +15,9 @@ export default {
   },
 
   methods: {
-    display_joke(loud_joke) { 
-      this.jokes.push(loud_joke);
+    display_joke(loud_joke) {
+      let string_loud = loud_joke.toUpperCase();
+      this.jokes.push(string_loud);
     },
   },
 
