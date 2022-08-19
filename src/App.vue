@@ -1,27 +1,27 @@
 <template>
-  <div id="app"> 
+  <div id="app">
     <joke-button></joke-button>
-    <normal-joke-button></normal-joke-button>
-    <snake-joke-button></snake-joke-button>
-    <loud-joke-button></loud-joke-button>
+      <normal-joke-button></normal-joke-button>
+      <snake-joke-button></snake-joke-button>
+      <loud-joke-button></loud-joke-button>
   </div>
 </template>
 
 <script>
-import JokeButton from './components/JokeButton.vue'
-import LoudJokeButton from './components/LoudJokeButton.vue'
-import NormalJokeButton from './components/NormalJokeButton.vue'
-import SnakeJokeButton from './components/SnakeJokeButton.vue'
+import JokeButton from "./components/JokeButton.vue";
+import LoudJokeButton from "./components/LoudJokeButton.vue";
+import NormalJokeButton from "./components/NormalJokeButton.vue";
+import SnakeJokeButton from "./components/SnakeJokeButton.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     NormalJokeButton,
     SnakeJokeButton,
     LoudJokeButton,
-    JokeButton
-  }
-}
+    JokeButton,
+  },
+};
 </script>
 
 <style>
