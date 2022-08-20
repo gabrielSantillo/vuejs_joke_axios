@@ -1,7 +1,7 @@
 <template>
-    <div v-if="joke !== undefined">
-      <h4>{{ joke }}</h4>
-    </div>
+  <div v-if="joke !== undefined">
+    <h4>{{ joke }}</h4>
+  </div>
 </template>
 
 <script>
@@ -17,7 +17,7 @@ export default {
     /* this function is called after the listener receive the parameter from the emitter */
     display_joke(normal_joke) {
       /* adding the value received from the emitter to the variable */
-      this.joke = normal_joke     
+      this.joke = normal_joke;
     },
   },
 

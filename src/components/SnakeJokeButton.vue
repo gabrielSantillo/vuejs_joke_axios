@@ -1,7 +1,7 @@
 <template>
-    <div v-if="joke !==undefined">
-      <h4>{{ joke }}</h4>
-    </div>
+  <div v-if="joke !== undefined">
+    <h4>{{ joke }}</h4>
+  </div>
 </template>
 
 <script>
@@ -19,7 +19,7 @@ export default {
       /* this line of code receives the parameter and replaces all white space to _*/
       let string_snake = snake_joke.replace(/ /g, `_`);
       /* adding the value received from the emitter to the variable */
-      this.joke = string_snake
+      this.joke = string_snake;
     },
   },
 

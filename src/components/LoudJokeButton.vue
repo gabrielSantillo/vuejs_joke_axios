@@ -1,7 +1,7 @@
 <template>
-    <div v-if="joke !== undefined">
-      <h4>{{ joke }}</h4>
-    </div>
+  <div v-if="joke !== undefined">
+    <h4>{{ joke }}</h4>
+  </div>
 </template>
 
 <script>
@@ -19,7 +19,7 @@ export default {
       /* this line of code receives the parameter and change all letters to Upper Case letters*/
       let string_loud = loud_joke.toUpperCase();
       /* adding the value received from the emitter to the variable */
-      this.joke = string_loud
+      this.joke = string_loud;
     },
   },
 
