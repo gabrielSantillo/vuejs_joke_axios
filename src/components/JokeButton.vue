@@ -3,7 +3,7 @@
     <button @click="generate_joke">Generate a Joke</button>
     <hr />
     <div v-if="is_joke_generated === true">
-      <h3>Click a button a chose the way you want to see the joke</h3>
+      <h3>Click a button and chose the way you want to see the joke</h3>
     </div>
     <div class="button_container">
       <button @click="display_normal_joke">Normal Joke</button>
@@ -14,6 +14,7 @@
 </template>
 
 <script>
+/* importing axios */
 import axios from "axios";
 export default {
   methods: {
@@ -56,6 +57,7 @@ export default {
     return {
       /* setting this variable to undefined */
       random_joke: undefined,
+      /* setting this variable to false */
       is_joke_generated: false,
     };
   },

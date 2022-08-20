@@ -1,17 +1,15 @@
 <template>
-  <div v-if="jokes.length > 0">
-    <div v-for="(joke, index) in jokes" :key="index">
+    <div v-if="joke !== undefined">
       <h4>{{ joke }}</h4>
     </div>
-  </div>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      /* this function is called after the listener receive the parameter from the emitter */
-      jokes: [],
+      /* variable initialized as undefined */
+      joke: undefined,
     };
   },
 
@@ -20,8 +18,8 @@ export default {
     display_joke(loud_joke) {
       /* this line of code receives the parameter and change all letters to Upper Case letters*/
       let string_loud = loud_joke.toUpperCase();
-      /* adding the joke with all letters in Upper Case into the array */
-      this.jokes.push(string_loud);
+      /* adding the value received from the emitter to the variable */
+      this.joke = string_loud
     },
   },
 

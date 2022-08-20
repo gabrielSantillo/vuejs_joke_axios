@@ -1,25 +1,23 @@
 <template>
-  <div v-if="jokes.length > 0">
-    <div v-for="(joke, index) in jokes" :key="index">
+    <div v-if="joke !== undefined">
       <h4>{{ joke }}</h4>
     </div>
-  </div>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      /* array initialized to receive the jokes as strings */
-      jokes: [],
+      /* variable initialized as undefined */
+      joke: undefined,
     };
   },
 
   methods: {
     /* this function is called after the listener receive the parameter from the emitter */
     display_joke(normal_joke) {
-      /* adding the joke into the array */
-      this.jokes.push(normal_joke);
+      /* adding the value received from the emitter to the variable */
+      this.joke = normal_joke     
     },
   },
 

@@ -1,17 +1,15 @@
 <template>
-  <div v-if="jokes.length > 0">
-    <div v-for="(joke, index) in jokes" :key="index">
+    <div v-if="joke !==undefined">
       <h4>{{ joke }}</h4>
     </div>
-  </div>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      /* array initialized to receive the jokes as strings */
-      jokes: [],
+      /* variable initialized as undefined */
+      joke: undefined,
     };
   },
 
@@ -20,8 +18,8 @@ export default {
     display_joke(snake_joke) {
       /* this line of code receives the parameter and replaces all white space to _*/
       let string_snake = snake_joke.replace(/ /g, `_`);
-      /* adding the joke with _ into the array */
-      this.jokes.push(string_snake);
+      /* adding the value received from the emitter to the variable */
+      this.joke = string_snake
     },
   },
 
